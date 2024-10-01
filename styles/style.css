@@ -152,19 +152,19 @@
     --icon-color: #3B3561;
     --nav-color: #9BFFAE; 
     --card-background: #9BFFAE;
-    --button-stroke-color: #20FC8F; 
+    --button-stroke-color: #3B3561; 
     --font-primary: "brevia", sans-serif;
     --logo-color: #3B3561;
     --hero-background: linear-gradient(to right, #ffffff, #9BFFAE);
   }
 
   body:has(input[value="blue"]:checked){
-    --body-background: #ADFCF9;
+    --body-background: #D8FEFC;
     --text-color: #2B2D42;
     --icon-color: #2B2D42;
-    --nav-color: #3098FF; 
-    --card-background: #3098FF;
-    --button-stroke-color: #3098FF; 
+    --nav-color: #13FFF7; 
+    --card-background: #13FFF7;
+    --button-stroke-color: #2B2D42; 
     --font-primary: 'Europa', sans-serif;
     --logo-color: #2B2D42;
     --hero-background: linear-gradient(to right, #ffffff, #ADFCF9);
