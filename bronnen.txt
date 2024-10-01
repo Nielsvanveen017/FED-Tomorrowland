@@ -1,0 +1,37 @@
+Hulp bij opdracht en schrijven van code:
+https://chatgpt.com/, slides DLO, David en Ivo
+
+Afbeeldingen:
+https://www.tomorrowland.com/home/
+
+Navigatie menu met in- en uitklappen:
+https://codepen.io/miguelznunez/pen/GRmLxPQ, https://codepen.io/shooft/pen/VwJXNEg*/
+
+Carousel:
+https://css-tricks.com/css-only-carousel/ 
+https://chatgpt.com -> promt: Ik will de event cards also carousel tonen waarbij er 1 event card wordt getoond en van de andere been klein stukje aan de rechterkant. hoe doe ik dit met HTML css
+
+Bron voor light en darkmode:
+https://www.youtube.com/watch?v=_gKEUYarehE 
+
+Tomorrowland logo SVG:
+https://www.svgrepo.com/svg/306865/tomorrowland 
+
+Hulp bij opschonen code (ChatGPT):
+Promt: n m'n css gebruik ik vaak dezelfde stijlen. Zo heb ik een event-container, slider container en een news container. Kan ik die stijlen ook samenvoegen in een class zodat ik die kan hergebruiken? Mij is geleerd zoveel mogelijk met pseudo selectoren te werken maar ook zo min mogelijk css te schrijven.
+
+Sound effect:
+https://www.youtube.com/watch?v=h8y0JMVwdmM 
+
+Alt tekst voor SVG:
+https://toegankelijkonline.nl/artikelen/toegankelijke-afbeeldingen#:~:text=SVG%20afbeeldingen%20kunnen%20via%20het,een%20alt%20attribuut%20worden%20gekoppeld.
+ 
+
+Toegankelijkheid a:
+ChatGPT, prompt: Hoe laat je op een semantische manier weten waar een link heen gaat 
+
+Brevia lettertype:
+https://fonts.adobe.com/fonts/brevia
+
+Edu SA Beginner lettertype:
+https://fonts.adobe.com/fonts/edu-sa-beginner

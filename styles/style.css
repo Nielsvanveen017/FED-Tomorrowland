@@ -1,0 +1,701 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/**************/
+/* Lettertypes importeren */
+/**************/
+
+
+/******* Default lettertype *******/
+/* Normaal 400 */
+@font-face {
+    font-family: 'Europa';
+    src: url('fonts/europa-regular.woff2') format('woff2'),
+         url('fonts/europa-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Cursief 400 */
+@font-face {
+    font-family: 'Europa';
+    src: url('fonts/europa-italic.woff2') format('woff2'),
+         url('fonts/europa-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Vet 700 */
+@font-face {
+    font-family: 'Europa';
+    src: url('fonts/europa-bold.woff2') format('woff2'),
+         url('fonts/europa-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Vet cursief 700 */
+@font-face {
+    font-family: 'Europa';
+    src: url('fonts/europa-bolditalic.woff2') format('woff2'),
+         url('fonts/europa-bolditalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+
+
+/******* Meisjes lettertype *******/
+@font-face {
+    font-family: "edu-sa-beginner";
+    src: url('fonts/edu-sa-beginner-regular.woff2') format('woff2'),
+         url('fonts/edu-sa-beginner-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "edu-sa-beginner";
+    src: url('fonts/edu-sa-beginner-bold.woff2') format('woff2'),
+         url('fonts/edu-sa-beginner-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*, *::after, *::before {
+  box-sizing:border-box;  
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/******* Groen lettertype *******/
+@font-face {
+    font-family: "brevia";
+    src: url('fonts/brevia-regular.woff2') format('woff2'),
+         url('fonts/brevia-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Brevia Medium */
+@font-face {
+    font-family: "brevia";
+    src: url('fonts/brevia-medium.woff2') format('woff2'),
+         url('fonts/brevia-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Brevia Bold */
+@font-face {
+    font-family: "brevia";
+    src: url('fonts/brevia-bold.woff2') format('woff2'),
+         url('fonts/brevia-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+
+/* Default (dark mode) */
+:root {
+    --body-background: #372E1E;
+    --text-color: #ffffff;
+    --icon-color: #ffffff;
+    --nav-color: #000000;
+    --card-background: #000000;
+    --button-stroke-color: #ffffff;
+    --font-primary: 'Europa', sans-serif;
+    --logo-color: #ffffff;
+    --font-size-base: 1rem;
+  }
+  
+  /* Met has kan ik de value die gelijk aan iets staat uit de html selecteren */
+  body:has(input[value="light"]:checked) {
+    --body-background: #f5f5f5;
+    --text-color: #000000;
+    --icon-color: #000000;
+    --nav-color: #ffffff;
+    --card-background: #ffffff;
+    --button-stroke-color: #000000;
+    --font-primary: 'Europa', sans-serif;
+    --logo-color: #000000;
+    --hero-background: #ffffff;
+  }
+  
+
+  body:has(input[value="girl"]:checked){
+    --body-background: #FBDBF5;
+    --text-color: #880E4F;
+    --icon-color: #880E4F;
+    --nav-color: #f9bcff; 
+    --card-background: #F6B6EB;
+    --button-stroke-color: #AD1457; 
+    --font-primary: "edu-sa-beginner", sans-serif;
+    --logo-color: #880E4F;
+    --hero-background: linear-gradient(to right, #FCE4EC, #F48FB1);
+  }
+  
+  body:has(input[value="green"]:checked){
+    --body-background: #D0FFD6;
+    --text-color: #3B3561;
+    --icon-color: #3B3561;
+    --nav-color: #9BFFAE; 
+    --card-background: #9BFFAE;
+    --button-stroke-color: #20FC8F; 
+    --font-primary: "brevia", sans-serif;
+    --logo-color: #3B3561;
+    --hero-background: linear-gradient(to right, #ffffff, #9BFFAE);
+  }
+
+  body:has(input[value="blue"]:checked){
+    --body-background: #ADFCF9;
+    --text-color: #2B2D42;
+    --icon-color: #2B2D42;
+    --nav-color: #3098FF; 
+    --card-background: #3098FF;
+    --button-stroke-color: #3098FF; 
+    --font-primary: 'Europa', sans-serif;
+    --logo-color: #2B2D42;
+    --hero-background: linear-gradient(to right, #ffffff, #ADFCF9);
+  }
+
+/* Algemene stijl */
+body{
+    background-color: var(--body-background);
+    margin-bottom: 2.25rem;
+    font-family: var(--font-primary);
+}
+
+h1{
+    font-size: 2.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: var(--text-color);
+}
+
+h2{
+    font-size: 2rem;   
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+h3{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+h4{
+    font-size: 20px;
+}
+
+p{
+    color: var(--text-color);
+}
+
+article h2{
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*********************/
+/* Navigatie balk */
+/*********************/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Verhoog de z-index om het boven de afbeelding te plaatsen */
+}
+
+.skip-link{
+    position: absolute;
+    top: -40px; /* Verberg de link buiten het zicht */
+    left: 0;
+    background-color: #000; /* Achtergrondkleur */
+    color: #fff; /* Tekstkleur */
+    padding: 8px 16px; /* Ruimte rond de tekst */
+    z-index: 100; /* Zorg ervoor dat de link boven andere elementen staat */
+}
+
+.skip-link:focus {
+    top: 10px; /* Zet de link in zicht wanneer deze de focus heeft */
+}
+
+nav{
+    background-color: var(--nav-color);
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    top: 0;
+    width: 100%;
+    position: fixed; /* Anders zie je witruimte als je helemaal omhoog of naar beneden scrollt */
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: var(--icon-color);
+    text-decoration: none;
+}
+
+nav a svg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+nav a svg:first-child{
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--icon-color);   
+}
+
+nav ul li img{
+    height: 0.875rem;
+    width: 0.75rem;
+    transform: rotate(-90deg);
+}
+
+nav ul li a{
+    padding: 1rem;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav ul li a svg path{
+    stroke: var(--icon-color);
+}
+
+
+
+
+/*********************/
+/* Hamburger menu */
+/*********************/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 60px;
+    padding: 0 8px;
+    height: 100dvh;
+    position: fixed;
+}
+
+.bar{
+    display: block;
+    width: 1.5rem;
+    height: 0.25rem;
+    margin: 0.25rem auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--icon-color);
+}
+
+/* Bron: https://codepen.io/miguelznunez/pen/GRmLxPQ, https://codepen.io/shooft/pen/VwJXNEg*/
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-last-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-last-child(3){
+       transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-last-child(1){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        gap: 0;
+        flex-direction: column;
+        backdrop-filter: brightness(90%) blur(60px);
+        background-color: var(--nav-background-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active{
+        top: 70px;
+    }
+}
+
+
+
+
+/*********************/
+/* Knoppen in navigatie menu voor thema's */
+/*********************/
+#theme-form {
+    display: flex;
+    gap:  0.75rem; /* Ruimte tussen de knoppen */
+}
+
+.custom-radio input[type="radio"] {
+    display: none; /* Verberg de standaard radio buttons */
+}
+
+/* Door ::before te gebruiken kan ik de radio buttons opmaken, als ik dit weg zou laten dan krijgen ze geen fill */
+/* Ik gebruik before om extra stijling toe te voegen zonder dat daar een html element voor nodig is, geen lege div voor een design element */
+.custom-radio::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem; 
+    border-radius: 50%;
+    border: .5px solid #8D8D8D; 
+    cursor: pointer;
+}
+
+/* Kleuren voor de verschillende knoppen */
+.custom-radio:nth-child(1)::before {
+    background-color: black; /* Witte knop */
+}
+
+.custom-radio:nth-child(2)::before {
+    background-color: white; /* Zwarte knop */
+}
+
+.custom-radio:nth-child(3)::before {
+    background-color: pink; /* roze knop */
+}
+
+.custom-radio:nth-child(4)::before {
+    background-color: #20FC8F; /* groene knop */
+}
+
+.custom-radio:nth-child(5)::before {
+    background-color: blue; /* blauwe knop */
+}
+
+
+
+
+
+/*********************/
+/* Footer */
+/*********************/
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rempx;
+    padding: 4rem 1.25rem 0px;
+}
+footer section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer section h2{
+    color: var(--text-color);
+}
+
+footer section svg{
+    width: 6.25rem;
+    height: 6.25rem;
+    fill: var(--logo-color); 
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column; 
+    list-style-type: none;
+    padding: 1rem;
+    color: var(--color-text-dark);
+}
+
+footer ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0 0.75rem 0;
+    border-top: .5px solid var(--button-stroke-color);
+    font-size: 14px;
+}
+
+
+
+
+
+/*********************/
+/* Hero section */
+/*********************/
+.hero-section{
+    position: relative;
+    z-index: 1;
+}
+
+/* Je kan geen ::before op een img zetten, dus moet hij op de hero-section */
+/* Bron: David */
+.hero-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--body-background) 100%);
+    z-index: 1;
+}
+
+.hero-section img{
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0; /* De afbeelding is onder de gradient */
+}
+
+.hero-section div{
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    z-index: 3; /* Tekst moet boven de gradient en afbeelding komen */
+}
+
+.hero-section div h1{
+    font-size: 2.25rem;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+
+.hero-section div p{
+    font-weight: 200;
+    color: var(--text-color);
+    font-size: 16px;
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;  
+    line-height: 1.8rem 
+}
+
+.hero-section div a{
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    border: solid 1px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    width: fit-content;
+}
+
+.hero-section div a:focus{
+    background-color: aqua;
+}
+
+
+
+
+/*********************/
+/* Upcoming Events Slider */
+/*********************/
+/* Hierbij heb ik hulp gekregen van David */
+.slider-container{
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5;
+}
+
+.slider-container ul {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.event-card  {
+    display: flex; /* Voeg deze regel toe om flex gedrag te forceren */
+    flex-direction: column; /* Zorgt ervoor dat kinderen onder elkaar staan */
+    justify-content: flex-start; /* Zorgt ervoor dat ze aan de bovenkant uitgelijnd zijn */
+    flex: 0 0 90%; /* Elke kaart neemt 90% van de breedte in */
+    border-radius: 1rem;
+    scroll-snap-align: start; 
+    transition: transform 0.3s ease;
+    background-color: var(--card-background);
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    height: 200px;
+}
+
+.event-card section{
+    margin: 1.5rem;
+}
+
+.event-card section h3{
+    display: flex;
+    text-align: center;
+    margin: 0.25rem 0 0.75rem 0;
+    font-size: 1.25rem;
+    letter-spacing: .08rem;
+    font-weight: 400;
+}
+
+.event-info{
+    display: flex;
+    gap: 0.7rem;
+    font-weight: 300;
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    align-items: center;
+    margin: 0;
+}
+
+.event-info svg{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.event-info svg path{
+    fill: var(--icon-color)
+}
+
+.large-button{
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    border: solid 1px;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.large-button:focus{
+    background-color: aqua;   
+}
+
+
+
+/*********************/
+/* Highlights & News */
+/*********************/
+.news-container h2{
+    margin: 2rem 1rem;
+}
+.news-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background);
+    border-radius: 1em;
+    height: 100%;
+    margin: 2rem 1rem;
+}
+
+.news-card img{
+    height: 20vh;
+    width: auto;
+    border-radius: 1rem 1rem 0 0 ;
+    object-fit: cover;
+}
+
+.news-card section{
+    border-radius: 0 0 1rem 1rem;
+    margin: 1.5rem;
+}
+
+.news-card section h3{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0 0.75rem 0;
+    font-size: 20px;
+    letter-spacing: .08rem;
+    font-weight: 500;
+}
+
+.news-card h4{
+    margin: 5px 0 5px 0;
+    font-weight: 500;
+}
+
+.news-card p{
+    font-weight: 50;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+
+
+
+
+/*********************/
+/* Upcoming Events */
+/*********************/
+article h1{
+    margin: 6.25rem 1rem 2rem 1rem;
+}
+
+.event-container a{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color);
+    border-radius: 1rem;
+    height: 100%;
+    margin: 2rem 1rem;
+}
+
+
+
+
+
+/*********************/
+/* Animaties reduceren */
+/*********************/
+@media (prefers-reduced-motion: reduce) {
+    /* Zet hier de CSS voor verminderde beweging */
+    .nav-menu {
+      animation: none;
+      transition: none;
+    }
+
+    .nav-menu {
+        animation: none;
+        transition: none;
+    }
+
+    .bar{
+        animation: none;
+        transition: none;
+    }
+    .nav ul li a{
+        animation: none;
+        transition: none;
+    }
+}
